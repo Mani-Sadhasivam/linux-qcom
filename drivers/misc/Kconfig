@@ -766,6 +766,15 @@ config PANEL_BOOT_MESSAGE
 	  An empty message will only clear the display at driver init time. Any other
 	  printf()-formatted message is valid with newline and escape codes.
 
+config PWM_GPCLK3
+        tristate "GPCLK3 PWM support"
+        depends on OF && ARCH_QCOM
+        help
+          Sample PWM driver for using GPCLK3 module
+
+          To compile this driver as a module, choose M here: the module
+          will be called pwm-gpclk3.
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"

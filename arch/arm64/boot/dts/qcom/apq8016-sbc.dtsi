@@ -116,6 +116,14 @@
 			status = "okay";
 		};
 
+		gpclk3_pwm {
+                	compatible = "qcom, gpclk3-pwm";
+                	clocks = <&gcc GCC_GP3_CLK>;
+                	clock-names = "gpclk3";
+                	pinctrl-names = "default";
+                	pinctrl-0 = <&gpclk3_default>;
+                };
+
 		spi@78b7000 {
 		/* On High speed expansion */
 			label = "HS-SPI1";

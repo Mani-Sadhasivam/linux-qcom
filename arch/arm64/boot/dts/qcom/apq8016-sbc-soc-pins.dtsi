@@ -85,4 +85,16 @@
 			bias-pull-up;
 		};
 	};
+
+	gpclk3_default: gpclk3_default {
+        	pinmux {
+                	function = "gcc_gp3_clk_b";
+                	pins = "gpio13";
+       		};
+        	pinconf {
+                	pins = "gpio13";
+                	drive-strength = <2>;
+                	bias-disable = <0>;
+       		};
+	};
 };
